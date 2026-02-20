@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Karen Moica | Contadora Pública</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* BOTÓN WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f, #294f7a);
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .hero span {
+            display: block;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .btn {
+            background: white;
+            color: #1e3a5f;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3a5f;
+            margin-bottom: 30px;
+        }
+
+        /* SERVICIOS */
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f4f6f8;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        /* BENEFICIOS */
+        .beneficios ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .beneficios li {
+            padding: 10px 0;
+            font-size: 16px;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            background: #f4f4f4;
+        }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            min-height: 120px;
+        }
+
+        button {
+            background: #1e3a5f;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .datos p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573106878842" class="whatsapp" target="_blank">
+    💬 WhatsApp
+</a>
+
+<header class="hero">
+    <h1>Karen Moica</h1>
+    <p>Contadora Pública</p>
+    <span>Asesoría Contable y Tributaria</span>
+    <a href="#contacto" class="btn">Solicitar asesoría</a>
+</header>
+
+<section class="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        Contadora pública con experiencia en la gestión contable, tributaria y financiera,
+        enfocada en brindar soluciones claras, confiables y oportunas a personas naturales,
+        emprendedores y empresas.
+    </p>
+</section>
+
+<section class="servicios">
+    <h2>Servicios</h2>
+    <div class="grid-servicios">
+        <div class="card">📊 Contabilidad general</div>
+        <div class="card">🧾 Declaración de impuestos</div>
+        <div class="card">👩‍💼 Personas naturales</div>
+        <div class="card">🏢 Contabilidad para empresas</div>
+        <div class="card">💼 Asesoría financiera</div>
+        <div class="card">📑 Informes contables</div>
+    </div>
+</section>
+
+<section class="beneficios">
+    <h2>¿Por qué elegirme?</h2>
+    <ul>
+        <li>✔ Atención personalizada</li>
+        <li>✔ Cumplimiento normativo</li>
+        <li>✔ Confidencialidad y responsabilidad</li>
+        <li>✔ Acompañamiento profesional permanente</li>
+    </ul>
+</section>
+
+<section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+
+    <div class="contacto-grid">
+        <form id="formContacto">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <div class="datos">
+            <p>📍 Bogotá, Colombia</p>
+            <p>📱 WhatsApp: 310 687 8842</p>
+            <p>📧 karenmoica.contadorp@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Karen Moica | Contadora Pública</p>
+</footer>
+
+<script>
+    document.getElementById("formContacto").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Gracias por tu mensaje. Karen Moica se pondrá en contacto contigo pronto.");
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
